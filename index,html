@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Podkova&display=swap');
+    </style>
+    <title>La Padarie</title>
+
+    <!-- Isso aqui importa o CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav></nav>
+    <section>
+        <header>
+            <img src="https://gitlab.com/InfoJrUFBA/projetos/internos/Pluginfo/Trainee/2020-1/atividade-html-css/uploads/a14c13ff1ca1d828bd62a2c378c6616f/Logo.png"
+                class="imagem" alt="La Padarie Logo">
+            <h3>Quem quer pão?</h3>
+
+        </header>
+
+        <main>
+
+
+            <div id="app">
+                <ul id="caller"></ul>
+                <input id="name" value="" type="text" placeholder="DIGITE SEU NOME ...">
+                <input id="amount" value="" type="text" placeholder="Quantidade">
+                <button id="button">Entrar Na <br> Fila</button>
+            </div>
+
+            <script src="contador.js"></script>
+        </main>
+
+        <aside>
+            <h3>Regras</h3>
+
+            <ul>
+                <li>Ter entre 3 e 180 anos</li>
+                <li>Tem que gostar de pão</li>
+                <li>Tem que ter assistido a capacitação</li>
+            </ul>
+
+        </aside>
+
+    </section>
+
+</body>
+
+</html>
