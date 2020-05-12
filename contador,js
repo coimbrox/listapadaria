@@ -1,0 +1,52 @@
+let queue = [
+    {
+        name: "Antonio figueiredo",
+        amount: 3,
+    },
+    {
+        name: "Maria Carolina",
+        amount: 1,
+    },
+    {
+        name: "Jão Vitor",
+        amount: 2,
+    },
+    {
+        name: "Andressa Silva",
+        amount: 27,
+    },
+];
+
+function createItem(text) {  // função recebe texto e retorna item criado
+    let mostrarElement = document.createElement('li');  // criando lI e guardando (na variável mostrar element) objeto do tipo Li
+    let mostrarNome = document.createTextNode(text);  // criando nó de texto exemplo p e guardando na variavel (mostrar nome)
+
+    mostrarElement.appendChild(mostrarNome); // adicionando um filho ao elemento  ( colocando o P dentro do Li ) pegando o que ta guardado e adicionando o texto dentro 
+    console.log(mostrarElement);
+
+    return mostrarElement;  // retornando o elemento ja com o texto 
+}
+//ADD UM ITEM NUMMA LISTA
+function addItem(list, item) {  // criando parametros para receber a lista e o item
+    list.appendChild(item);  // adicionando o item dentro da lista
+
+}
+
+//RECEBE COMO 1 UM ARRAY DE VALOR E COMO SEGUNDO UMA LISTA ONDE COLOCA OS VALORES 
+function readList(data, lista) { // função que corre pelo array queue
+    let i = 0   // definindo valor de i 
+    for (i = 0; i < data.length; i++) {   // definindo valor inicial, criando condição de continuação do for (enquanto o meio for vdd executa), após alguma execução ele executa o terceiro bloco
+
+        let item = createItem(data[i].name); // chamando a função ,criando item e adionando o valor variavel a posição do array
+        addItem(lista, item);
+    }  // i define a posição do for 
+}
+//chamar o elemento
+let tabela = document.querySelector("#caller"); //capturando a lista 
+
+//CRIANDO ITENS E ADICIONANDO A TABELA
+/*let resultado = createItem("Gabriel"); // criei variável para salvar o retorno do create item ( ou seja o item criado)
+let batata = createItem("Matheus");
+addItem(tabela, resultado);  //chamado para exibir na tela 
+addItem(tabela, batata); */
+readList(queue, tabela);  //funçao que corre pelo array
