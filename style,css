@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Podkova', serif;
+    background-color: #E5CF94;
+}
+
+section{
+    max-width: 975px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        '... header header header'
+        'aside main main main'
+    ;
+    grid-gap: 10px;
+    margin: auto;
+}
+
+nav{
+    border-top: 20px solid #311B02;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: 1px 1px 10px;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    margin: 10px;
+    color: #311B02;
+}
+
+header h3{
+    color: rgb(83, 45, 2);
+    margin-top: 40px;
+    margin-left: 30px;
+    padding: 50px;
+}
+
+aside{
+    grid-area: aside;
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px gray;
+    justify-content: center;
+    height: min-content;
+}
+
+aside h3{
+    color: rgb(83, 45, 2);
+    margin-bottom: 10px;
+}
+
+main{
+    grid-area: main;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 10px gray;
+}
+
+main h3{
+    color: rgb(83, 45, 2)
+}
+
+div{
+    padding: 10px;
+}
+
+ul{
+    padding-left: 25px;
+}
+
+li{
+    padding-left: -10px;
+}
+
+#myName{
+    background-color: #EDEDED;
+    border: dashed 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 786px){
+    nav{
+        width: 100%;
+    }
+
+    section{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'header'
+            'aside'
+            'main'
+        ;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header h3{
+        padding: 0px;
+        margin: auto;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .imagem{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
